@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addReservation } from '../features/reservationSlice'; // Redux action
+import { addReservation } from '../features/reservationSlice'; 
 import { useNavigate } from 'react-router-dom';
 import Navbar from './Navbar';
 
@@ -17,28 +17,25 @@ function ReservationForm() {
     roomType: 'Normal',
   });
 
-  // Handle form input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Dispatch the action to add a reservation
     dispatch(addReservation(formData));
 
   };
 
   return (
     <div className="container mt-5">
-        <Navbar ></Navbar>
-      <h2 className="text-center text-light fw-bolder">Reservation Form</h2>
-      <form onSubmit={handleSubmit} className="p-4 border rounded bg-light">
+      <Navbar />
+      <h2 className="text-center text-white fw-bolder fw-bolder mb-4">Reservation Form</h2>
+      <form onSubmit={handleSubmit} className="p-4 border rounded shadow-sm bg-light">
         {/* Name */}
         <div className="mb-3">
-          <label htmlFor="name" className="form-label">Name</label>
+          <label htmlFor="name" className="form-label">Full Name</label>
           <input 
             type="text" 
             id="name" 
@@ -47,12 +44,12 @@ function ReservationForm() {
             value={formData.name} 
             onChange={handleChange} 
             required 
+            placeholder="Enter your full name"
           />
         </div>
         
-        {/* Email */}
         <div className="mb-3">
-          <label htmlFor="email" className="form-label">Email</label>
+          <label htmlFor="email" className="form-label">Email Address</label>
           <input 
             type="email" 
             id="email" 
@@ -61,10 +58,10 @@ function ReservationForm() {
             value={formData.email} 
             onChange={handleChange} 
             required 
+            placeholder="Enter your email"
           />
         </div>
         
-        {/* Check-In Date */}
         <div className="mb-3">
           <label htmlFor="checkIn" className="form-label">Check-In Date</label>
           <input 
@@ -78,7 +75,6 @@ function ReservationForm() {
           />
         </div>
         
-        {/* Check-Out Date */}
         <div className="mb-3">
           <label htmlFor="checkOut" className="form-label">Check-Out Date</label>
           <input 
@@ -92,7 +88,6 @@ function ReservationForm() {
           />
         </div>
         
-        {/* Number of Guests */}
         <div className="mb-3">
           <label htmlFor="guests" className="form-label">Number of Guests</label>
           <input 
@@ -104,10 +99,10 @@ function ReservationForm() {
             onChange={handleChange} 
             required 
             min="1" 
+            placeholder="Number of guests"
           />
         </div>
         
-        {/* Room Type Selection */}
         <div className="mb-3">
           <label htmlFor="roomType" className="form-label">Room Type</label>
           <select 
@@ -124,8 +119,9 @@ function ReservationForm() {
           </select>
         </div>
         
-        {/* Submit Button */}
-        <button type="submit" className="btn btn-primary">Submit Reservation</button>
+        <button type="submit" className="btn btn-primary w-100 mt-3 py-2">
+          Submit Reservation
+        </button>
       </form>
     </div>
   );

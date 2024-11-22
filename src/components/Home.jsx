@@ -10,7 +10,7 @@ function Home() {
   useEffect(() => {
     axios.get('http://localhost:5000/rooms')
       .then(response => {
-        setRooms(response.data); // Set fetched rooms data
+        setRooms(response.data); 
       })
       .catch(error => {
         console.error("There was an error fetching the room data!", error);

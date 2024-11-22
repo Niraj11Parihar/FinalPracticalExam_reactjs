@@ -48,38 +48,34 @@ const reservationSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      // Handle adding a reservation
       .addCase(addReservation.pending, (state) => {
         state.status = 'loading';
       })
       .addCase(addReservation.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.reservations.push(action.payload); // Add new reservation to the list
+        state.reservations.push(action.payload);
       })
       .addCase(addReservation.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
       })
       
-      // Handle fetching all reservations
       .addCase(fetchReservations.fulfilled, (state, action) => {
         state.reservations = action.payload;
       })
       
-      // Handle deleting a reservation
       .addCase(deleteReservation.fulfilled, (state, action) => {
         state.reservations = state.reservations.filter(
           (reservation) => reservation.id !== action.payload
         );
       })
       
-      // Handle updating a reservation
       .addCase(updateReservation.fulfilled, (state, action) => {
         const index = state.reservations.findIndex(
           (reservation) => reservation.id === action.payload.id
         );
         if (index !== -1) {
-          state.reservations[index] = action.payload; // Update the reservation in the list
+          state.reservations[index] = action.payload;
         }
       });
   },

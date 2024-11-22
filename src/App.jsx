@@ -4,7 +4,6 @@ import Registration from "./components/Registration";
 import Home from "./components/Home";
 import ReservationForm from "./components/ReservationForm";
 import ReservationList from "./components/ReservationList";
-import EditReservation from "./components/EditReservationForm";
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
           <Route path="/home" element={<Home/>} />
           <Route path="/registrationForm" element={<ReservationForm/>} />
           <Route path="/reservationList" element={<ReservationList/>} />
-          <Route path="/editReservation" element={<EditReservation/>} />
         </Routes>
       </BrowserRouter>
     </>

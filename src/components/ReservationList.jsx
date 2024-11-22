@@ -9,11 +9,11 @@ function ReservationList() {
   const reservations = useSelector((state) => state.reservation.reservations);
 
   useEffect(() => {
-    dispatch(fetchReservations()); // Fetch reservations when the component mounts
+    dispatch(fetchReservations());
   }, [dispatch]);
 
   const handleDelete = (id) => {
-    dispatch(deleteReservation(id)); // Delete reservation from the list
+    dispatch(deleteReservation(id));
   };
 
   return (
@@ -33,7 +33,6 @@ function ReservationList() {
               <strong>{reservation.name}</strong> ({reservation.roomType}) - {reservation.guests} guests<br />
               {reservation.email} - Check-in: {reservation.checkIn} | Check-out: {reservation.checkOut}
               <button onClick={() => handleDelete(reservation.id)} className="btn btn-danger btn-sm float-end ml-2">Delete</button>
-              {/* <Link to={`/editReservation/${reservation.id}`} className="btn btn-warning btn-sm mx-2 float-end">Edit</Link> */}
             </li>
           ))
         )}
