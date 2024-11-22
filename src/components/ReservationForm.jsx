@@ -29,8 +29,6 @@ function ReservationForm() {
     // Dispatch the action to add a reservation
     dispatch(addReservation(formData));
 
-    // Navigate to the reservation list page
-    navigate('/reservationList');
   };
 
   return (

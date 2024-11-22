@@ -22,6 +22,15 @@
       "checkOut": "2024-12-29",
       "guests": "2",
       "roomType": "Deluxe"
+    },
+    {
+      "id": "ba6b",
+      "name": "Niraj",
+      "email": "niraj@gmail.com",
+      "checkIn": "2025-01-25",
+      "checkOut": "2025-05-29",
+      "guests": "5",
+      "roomType": "Luxury"
     }
   ],
   "rooms": [
