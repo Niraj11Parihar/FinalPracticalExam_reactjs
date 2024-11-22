@@ -12,5 +12,36 @@
       "email": "niraj@gmail.com",
       "password": "12345"
     }
+  ],
+  "reservations": [
+    {
+      "id": "76e0",
+      "name": "Tushar",
+      "email": "Tushar@gmail.com",
+      "checkIn": "2024-12-26",
+      "checkOut": "2024-12-29",
+      "guests": "2",
+      "roomType": "Deluxe"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Normal Room",
+      "image": "https://hotellerv6-5.b-cdn.net/ski/wp-content/uploads/sites/4/2023/09/andrea-davis-k8WL83m48XY-unsplash-660x913.jpg",
+      "description": "A standard room for a comfortable stay with all the basic amenities."
+    },
+    {
+      "id": 2,
+      "name": "Deluxe Room",
+      "image": "https://hotellerv6-5.b-cdn.net/ski/wp-content/uploads/sites/4/2023/09/hans-isaacson-F9cDk61pBbM-unsplash-660x913.jpg",
+      "description": "A spacious room with luxurious amenities and extra comfort."
+    },
+    {
+      "id": 3,
+      "name": "Luxury Room",
+      "image": "https://hotellerv6-5.b-cdn.net/ski/wp-content/uploads/sites/4/2023/09/andrea-davis-8xT51zPdsjY-unsplash-660x913.jpg",
+      "description": "A premium room offering top-tier luxury with world-class services."
+    }
   ]
 }

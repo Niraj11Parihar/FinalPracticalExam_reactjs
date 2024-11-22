@@ -9,7 +9,7 @@ body{
 
 .home-content{
     background-color: transparent;
-    background-image: linear-gradient(100deg, #d9d3d31f 0%, #000000 150%);
+    background-image: linear-gradient(120deg, #d9d3d31f 0%, #000000 150%);
     height: 150vh;
 }
 
@@ -26,3 +26,41 @@ body{
     font-size: 100px;
     line-height: 1em;
 }
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    max-height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
